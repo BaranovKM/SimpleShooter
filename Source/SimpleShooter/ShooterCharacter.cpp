@@ -24,6 +24,10 @@ void AShooterCharacter::BeginPlay()
 	Health = MaxHealth;
 }
 
+bool AShooterCharacter::IsDead() const {
+	return Health <= 0;
+}
+
 // Called every frame
 void AShooterCharacter::Tick(float DeltaTime)
 {
