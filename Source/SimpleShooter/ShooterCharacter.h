@@ -28,6 +28,8 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override;
+	
+	void Shoot();
 
 	UFUNCTION(BlueprintPure)
 		bool IsDead() const;
@@ -35,8 +37,6 @@ public:
 private:
 	void MoveForward(float AxisValue);
 	void MoveRight(float AxisValue);
-	//void LookUp(float AxisValue);
-	void Shoot();
 
 	UPROPERTY(EditDefaultsOnly)
 		float MaxHealth = 100;
