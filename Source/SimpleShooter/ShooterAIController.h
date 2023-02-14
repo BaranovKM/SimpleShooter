@@ -6,9 +6,7 @@
 #include "AIController.h"
 #include "ShooterAIController.generated.h"
 
-/**
- * 
- */
+
 UCLASS()
 class SIMPLESHOOTER_API AShooterAIController : public AAIController
 {
@@ -19,6 +17,7 @@ protected:
 
 public:
 	virtual void Tick(float DeltaTime) override;
+	bool IsDead() const;
 
 private:
 	UPROPERTY(EditAnywhere)
